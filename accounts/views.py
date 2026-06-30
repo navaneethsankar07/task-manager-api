@@ -2,6 +2,8 @@ from rest_framework import status
 from rest_framework.generics import CreateAPIView
 from rest_framework.response import Response
 
+from rest_framework_simplejwt.views import TokenObtainPairView
+
 from .serializers import RegisterSerializer
 
 
@@ -23,3 +25,7 @@ class RegisterView(CreateAPIView):
             },
             status=status.HTTP_201_CREATED,
         )
+
+
+class LoginView(TokenObtainPairView):
+    pass
