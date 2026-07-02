@@ -12,3 +12,6 @@ db.sqlite3
 media/
 
 staticfiles/
+
+# Kubernetes secrets
+k8s/*secret.yaml
